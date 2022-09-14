@@ -1,0 +1,20 @@
+{
+    "parser": "@babel/eslint-parser",
+    "extends": "airbnb",
+    "rules": {
+      "no-console": "off",   // disable warnings when logging to console
+      "linebreak-style": 0,  // disable LF and CRLF linebreak errors
+      "no-plusplus": "off",   // disable no-plusplus errors
+      "prefer-const":"off",
+      "no-multi-spaces":"off",
+      "eol-last":"off",
+      "comma-dangle":"off",
+      "no-trailing-spaces":"off",
+      "indent":"off",
+      "new-parens":"off",
+      "quotes":"off",
+      "import/no-extraneous-dependencies": "off",
+      "no-unused-vars": "off",
+      "no-multiple-empty-lines": "off"
+    }
+  }

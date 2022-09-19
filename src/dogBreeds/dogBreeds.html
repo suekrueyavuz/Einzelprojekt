@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+
+    <div id="container">
+        <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="homepage.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="dogBreeds.html">Dog Breeds</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="favorites.html">Favorites</a>
+          </li>
+        </ul>
+    </div>
+    
+    <hr class="my-4">
+
+    <h5>Click to the breednames, to see an image and add to your favorites.</h5><br>
+
+    <div class="row">        
+        <div class="col">
+            <table class="table table-bordered" id="allBreedsTable">
+                <thead>
+                  <tr>
+                    <th>Breed</th>
+                    <th style="width: 5%;"></th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  
+                </tbody>
+            </table>
+        </div>
+        <div class="col">
+            <div id="imageOfSelectedDog">
+
+            </div>
+            <div id="button">
+              
+            </div>
+        </div>
+
+    </div>
+
+  </body>
+</html>

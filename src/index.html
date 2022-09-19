@@ -9,20 +9,25 @@
     <link rel="stylesheet" href="">
   </head>
   <body>
-    <div id="container">
-
-      <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contents</a>
-        </li>
-      </ul>
-
+    <div class="page-header">
+      <h1 class="display-4">Dog Breeds</h1>
+      <p class="lead">This is a website where you can learn more about dog breeds.</p>
+      <hr class="my-4">
     </div>
+
+    <div id="container">
+      <form name="input" id="input">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="email">
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password">
+        </div>
+        <button type="button" class="btn btn-primary" id="button">Submit</button>
+      </form>
+    </div>
+    
   </body>
 </html>

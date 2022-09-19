@@ -15,6 +15,33 @@
       "quotes":"off",
       "import/no-extraneous-dependencies": "off",
       "no-unused-vars": "off",
-      "no-multiple-empty-lines": "off"
+      "no-multiple-empty-lines": "off",
+      "no-alert": "off",
+      "import/no-unresolved": "off",
+      "import/extensions": "off",
+      "import/no-import-module-exports": "off",
+      "space-before-function-paren": "off",
+      "semi": "off",
+      "func-names": "off",
+      "no-use-before-define": "off",
+      "keyword-spacing": "off",
+      "prefer-arrow-callback": "off",
+      "no-tabs": "off",
+      "no-mixed-spaces-and-tabs": "off",
+      "vars-on-top": "off",
+      "no-var": "off",
+      "no-restricted-syntax": "off",
+      "guard-for-in": "off",
+      "padded-blocks": "off",
+      "space-infix-ops": "off",
+      "arrow-parens": "off",
+      "prefer-template": "off",
+      "no-constant-condition": "off",
+      "no-lonely-if": "off",
+      "max-len": "off",
+      "arrow-body-style": "off"
+    },
+    "env": {
+      "browser": true 
     }
   }

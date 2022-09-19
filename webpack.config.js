@@ -3,18 +3,24 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
 const ESLintPlugin = require('eslint-webpack-plugin');
 
+
 module.exports = {
   // 1
   // Use the src/index.js file as entry point to bundle it.
   // If the src/index.js file imports other JS files,
   // bundle them as well
-  entry: path.resolve(__dirname, './src/index.js'),
+  entry: {
+    index: path.resolve(__dirname, './src/index.js'),
+    homepage: path.resolve(__dirname, './src/homepage/homepage.js'),
+    dogBreeds: path.resolve(__dirname, './src/dogBreeds/dogBreeds.js'),
+    favorites: path.resolve(__dirname, './src/favorites/favorites.js'),
+  },
   // 2
   // The bundles source code files shall result in a bundle.js file
   // in the /dist folder
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js'
   },
   // 3
   // The /dist folder will be used to serve our application
@@ -28,9 +34,30 @@ module.exports = {
     new ESLintPlugin(),
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Basic Webpack Setup',
+      filename: 'index.html',
+      title: "Dog Breeds",
       template: path.resolve(__dirname, './src/index.html'),
-    })],
+      chunks: ['index'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'homepage.html',
+      title: "Homepage",
+      template: path.resolve(__dirname, './src/homepage/homepage.html'),
+      chunks: ['homepage'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'dogBreeds.html',
+      title: "Dog Breeds",
+      template: path.resolve(__dirname, './src/dogBreeds/dogBreeds.html'),
+      chunks: ['dogBreeds'],
+    }),
+    new HtmlWebpackPlugin({
+      filename: 'favorites.html',
+      title: "Favorites",
+      template: path.resolve(__dirname, './src/favorites/favorites.html'),
+      chunks: ['favorites'],
+    })
+  ],
   // 5
   // Integrate Babel in the build process
   // Define which files to use the loader

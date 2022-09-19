@@ -24,8 +24,13 @@ function fillInTable(data) {
         let cellImage = row.insertCell(1);
 
         let favoritesList = JSON.parse(localStorage.getItem('favorites'))
-        if(favoritesList.includes(breed)) {
-            insertLikeImageIfBreedIsFavorite(cellImage);
+        
+        if(favoritesList === null) {
+            favoritesList = [];
+        } else {
+            if(favoritesList.includes(breed)) {
+                insertLikeImageIfBreedIsFavorite(cellImage);
+            }
         }
 
         let breedName = breed.charAt(0).toUpperCase() + breed.slice(1)
@@ -82,6 +87,8 @@ function addToFavorites(breedName) {
     if (localStorage.getItem('favorites') === null) {
         let favorites = [breedName];
         localStorage.setItem('favorites', JSON.stringify(favorites));
+        updateTable(breedName);
+        alert(breedName + ' added to the favorites list!')
     } else {
         if(!checkIfBreedIsInFavoritesList(breedName)) {
             let currentFavorites = JSON.parse(localStorage.getItem('favorites'));

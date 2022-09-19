@@ -68,8 +68,9 @@ function showImageOfDog(data, breedName) {
     img.src = data;
     img.style.width = 'auto';
     img.style.height = 'auto';
-    img.style.maxWidth = '450px';
-    img.style.maxHeight = '450px';
+    img.style.maxWidth = '50%';
+    img.style.maxHeight = '50%';
+    img.setAttribute('class', 'img-fluid');
     img.style.position = 'fixed';
 
     let button = document.createElement('button');

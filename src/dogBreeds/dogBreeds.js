@@ -70,12 +70,18 @@ function showImageOfDog(data, breedName) {
     img.style.height = 'auto';
     img.style.maxWidth = '50%';
     img.style.maxHeight = '50%';
+    img.style.display = 'block';
+    img.style.marginLeft = 'auto';
+    img.style.marginRight = 'auto';
+    img.style.paddingTop = '1rem';
     img.setAttribute('class', 'img-fluid');
-    img.style.position = 'fixed';
 
     let button = document.createElement('button');
     button.innerHTML = 'Add to favorites';
-    button.style.position = 'fixed';
+    button.style.display = 'block';
+    button.style.marginRight = 'auto';
+    button.style.marginLeft = 'auto';
+
     button.addEventListener('click', function() { 
         addToFavorites(breedName); 
     }, false);
